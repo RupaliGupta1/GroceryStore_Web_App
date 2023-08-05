@@ -1,0 +1,127 @@
+<div class="bootstrap-wrapper bgColor">
+  <div class="banner2">
+    <div class="bannerContent">
+
+      <h1>
+        Fresh And <i><b>Organic</b></i> Products<br> For You
+      </h1>
+      <button type="button" mat-raised-button color="#ccffdd" class="btn navbar-bg-second"
+        routerLink="/allproducts">SHOP NOW <i class="bi bi-arrow-right"></i></button>
+
+
+    </div>
+
+
+  </div>
+  <div class="container bgColor mt-3">
+    <div class="step">
+      <h1 class=" mb-3">Our<i> Features</i></h1>
+
+      <div class="row">
+
+        <!--One-->
+        <div class="col-lg-4">
+          <div class="stepBox">
+            <div class="mt-2 text-center">
+              <img src="../../assets/organic.jpg" height="140px">
+              <h5 class="mt-2">Fresh And Organic</h5>
+              <p>We are a one-stop shopping destination for all your daily essential needs. Shop from a wide range of
+                organic, pesticide-free groceries, dairy, fresh fruits</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!--two-->
+        <div class="col-lg-4">
+          <div class="stepBox">
+            <div class="mt-2 text-center">
+              <img src="../../assets/delivery.png" height="140px">
+              <h5 class="mt-2">Free Delivery</h5>
+              <p>We provide free Delivery charge on orders upto 1000 Rs, amazing discount offer on our products and your
+                order will be at your doorstep within few hours</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Three-->
+        <div class="col-lg-4">
+          <div class="stepBox">
+
+
+
+            <div class="mt-2 text-center">
+              <img src="../../assets/payment.png" height="140px">
+              <h5 class="mt-2">Easy Payment</h5>
+              <p>We provide easy payment modes for our customers, keep their information secure and they make payments
+                with just a few clicks. Happy shopping.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div class="container">
+    <div class="step mt-5">
+      <h1 class="mb-3">Our<i> Products</i></h1>
+    </div>
+
+    <div class="search_button  w-50 ">
+
+      <div class="input-icons">
+        <i class="bi bi-search icon"></i>
+        <input class="input-field" matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" ngModel
+          name="searchKey" id="searchKey" placeholder="Search any product">
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"  *ngFor="let p of productDetails">
+          <div class="row p-2 mt-5 "  (click)="showProductDetails(p.productId)">
+            <div class="image-container">
+              <img class=".home-page-product-image" height="180px" width="250px" [src]="p.productImages[0].url" alt="">
+            </div>
+
+            <div>
+              <p><b style="font-family: 'Times New Roman', Times, serif;">{{p.productName}}</b></p>
+            </div>
+            <div class="class-desp">
+              <p style="white-space: inherit; height:30px; width: 250px; overflow: hidden; text-overflow:  ellipsis;">
+                {{p.productDescription}} </p>
+            </div>
+
+            <div>
+              <b><i class="bi bi-currency-rupee"></i>{{p.productDiscountedPrice}} </b> &nbsp;&nbsp;<b
+                style="text-decoration:line-through">
+                {{p.productActualPrice}}</b>
+            </div>
+
+            <div class="mt-2">
+              <button type="button" mat-raised-button color="warn" style="font-size: 14px;"
+                (click)="showProductDetails(p.productId)">View
+                Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" mat-raised-button color="light" style="font-size: 14px;"
+                (click)="addToCart(p.productId)">Add To Cart</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-5">
+      <button type="button" mat-raised-button style="background-color: green; color: white;" routerLink="/allproducts">View More Products</button>
+    </div>
+  </div>
+    <app-footer></app-footer>

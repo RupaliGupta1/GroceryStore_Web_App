@@ -1,0 +1,101 @@
+<div class="container mt-5">
+
+    <div class="card p-3">
+        <div class="row">
+            <!--on left side:   we will be designing form to take details -fullname,contactno,alternatenum-->
+            <div class="col-6">
+
+                <form #orderForm="ngForm" (ngSubmit)="createTransactionAndPlaceOrder(orderForm)">
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="Full Name" [(ngModel)]="orderDetails.fullName" name="fullName" required>
+                    </mat-form-field>
+
+
+                    
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Full Address</mat-label>
+                        <input matInput placeholder="Full Address" [(ngModel)]="orderDetails.fullAddress" name="fullAddress" required>
+                    </mat-form-field>
+
+
+                    
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput type="tel" pattern="[6-9][0-9]{9}"   placeholder="Contact Number" [(ngModel)]="orderDetails.contactNumber" name="contactNumber" required>
+                    </mat-form-field>
+
+                    
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Alternate contact number</mat-label>
+                        <input matInput type="tel"  pattern="[6-9][0-9]{9}"  placeholder="Alternate Contact Number" [(ngModel)]="orderDetails.alternateContactNumber" name="alternateContactNumber">
+                    </mat-form-field>
+
+
+                    <div align="right">
+                        <button type="submit" style="background-color: #ccffdd; color: green;" mat-stroked-button color="primary" [disabled]="!orderForm.valid">Place Order</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- right side:   Generating bill-->
+            <div class="col-6">
+
+                <table class="table">   <!--bootstrap class table-->
+
+                    <thead class="thead">
+                        <tr>
+                           <th>Name</th>
+                           <th>Amount</th>
+                           <th>Quantity</th>
+                           <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr *ngFor="let product of productDetails">
+                            <td>{{product.productName}}</td>
+                            <td>{{product.productDiscountedPrice}}</td>
+                            <td>
+                                <select 
+                                #quantity
+                                class="form-select"
+                                [ngModel]="getQuantityForProduct(product.productId)"
+                                (change)="onQuantityChanged(quantity.value,product.productId)"
+                                >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                {{getCalculatedTotal(product.productId, product.productDiscountedPrice)}}
+                            </td>
+                          
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+                            <td></td>
+                            <td><b>Total</b></td>
+                            <td>{{getCalculatedGrandTotal()}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

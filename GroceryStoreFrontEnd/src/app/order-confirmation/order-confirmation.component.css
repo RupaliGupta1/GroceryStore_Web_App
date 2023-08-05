@@ -1,0 +1,22 @@
+.bi-check-circle-fill{
+    color: green;
+    font-size: 250%;
+}
+h3{
+    color: green;
+
+}
+.bi-arrow-right-circle-fill{
+    color: green;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.card{
+    border: solid;
+    border-color: green;
+    max-width:  70%;
+    left: 15%;
+ 
+    margin-top: 10%;
+}

@@ -1,0 +1,86 @@
+
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+ <div class="imgBG">
+  <img class ="bgImg" src="../../assets/reg3.jpg" >
+  <div class="centered">Happy Shopping</div>
+ </div>
+
+</div>
+<div class="col-lg-6 p-5">
+  <h5>New User Registration</h5>
+		<p class="text-center">already registered? <a routerLink="/login">Login</a></p>
+ 
+<form #registerForm="ngForm" (ngSubmit)="register(registerForm)" >
+
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>First Name</mat-label>
+    <input matInput 
+        ngModel 
+        name="userFirstName" 
+        id="userFirstName" 
+        required
+        pattern="[a-zA-Z]*"
+        
+        placeholder="First Name" class="form-control">
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="w-100">
+  <mat-label>Last Name</mat-label>
+  <input matInput 
+      ngModel 
+      name="userLastName" 
+      id="userLastName" 
+      required
+      pattern="[a-zA-Z]*"
+      placeholder="Last Name" class="form-control">
+</mat-form-field>
+
+
+<mat-form-field appearance="outline" class="w-100">
+<mat-label> Email</mat-label>
+<input matInput 
+    ngModel 
+    name="userName" 
+    id="userName" 
+    required
+    pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+    placeholder="Email" class="form-control">
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="w-100">
+<mat-label>Password</mat-label>
+<input matInput 
+  ngModel 
+  name="userPassword" 
+  id="userPassword" 
+  required
+  type="password"
+  minlength="6"
+  placeholder="Password" class="form-control">
+  
+  <mat-hint>Password should be atleast 6 characters</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="w-100">
+  <mat-label>Confirm Password</mat-label>
+  <input matInput 
+    ngModel 
+    name="confirmPassword"
+    id="confirmPassword" 
+    required
+    type="password"
+    minlength="6"
+    placeholder="Confirm Password" class="form-control">
+   
+  </mat-form-field>
+<button type="submit"  class="btnStyle"
+      color="primary" 
+      type="submit" 
+      >Register</button>
+
+</form>
+</div>
+</div>
+</div>

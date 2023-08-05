@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.green-snackbar {
+    background: rgb(65, 252, 134);
+    color: white;
+    background-color: bisque;
+}
+.green-snackbar button {
+    background-color: rgb(65, 252, 134);
+    color: white;
+    border: none;
+}
+.red-snackbar {
+    background: #F44336;
+    color: white;
+}
+.red-snackbar button {
+    background-color: #F44336;
+    color: white !important;
+    border: none;
+}
+
+.navbar-bg{
+    background-color:#00802b;
+}
+
+.navbar-bg-second{
+    background-color: #ccffdd;
+    color: darkgreen;
+    border-color: #F44336;
+}
+
+.btn-login{
+    background-color: #f2f2f2;
+}
+.navSecLen{
+height: 60px;
+}
+
+.navbar-brand{
+    cursor: pointer;
+}

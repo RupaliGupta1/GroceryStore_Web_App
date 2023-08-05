@@ -1,0 +1,31 @@
+.bgImage{
+    
+    height: 79.4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    background-image: Linear-gradient(rgba(157, 189, 148, 0.8),rgba(31, 27, 27, 0.8)),url(../../assets/banner3.jpg);
+
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  p{
+    color: white;
+    font-size: 20px;
+  }
+
+  h1{
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .content{
+    position:absolute;
+    top: 60%;
+   
+   
+}

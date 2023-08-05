@@ -1,0 +1,45 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-bg" >
+  <div class="container-fluid">
+    <h2 class="navbar-brand" routerLink="" style="font-weight: 700;"><span style="color: yellowgreen; font-weight:bolder; font-style: oblique;">Grocery</span> ToGo</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+       
+      </ul>
+      <button *ngIf="! isLoggedIn()" type="button" class="btn btn-light" routerLink="/login">Login</button>
+      <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()" >Logout</button>
+    </div>
+  </div>
+</nav> 
+
+
+<nav class="navbar navSecLen navbar-expand-lg navbar-dark navbar-bg-second">
+  <div class="text-center container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+
+    <a  routerLink="/"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a  routerLink="/allproducts"  routerLinkActive="active-link" >All Products</a>
+    
+    <a routerLink="/grocerylist"  routerLinkActive="active-link" >Grocery List</a>
+    <a routerLink="/aboutUs"  routerLinkActive="active-link" >AboutUs</a>
+    <div *ngIf="isLoggedIn()">
+    <a  *ngIf="!isAdmin()" routerLink="/cart"  routerLinkActive="active-link">Cart</a>
+    <a  *ngIf="!isAdmin()" routerLink="/myOrders"  routerLinkActive="active-link">My Orders</a>
+    <a  *ngIf="isAdmin()" routerLink="/addNewProduct" routerLinkActive="active-link">Add Product</a>
+    <a *ngIf="isAdmin()" routerLink="/showProductDetails" routerLinkActive="active-link">Product Details</a>
+    <a  *ngIf="isAdmin()" routerLink="/orderInformation" routerLinkActive="active-link"> All Orders</a>
+    <a  *ngIf="isAdmin()" routerLink="/allUsers" routerLinkActive="active-link"> All Users</a>
+    
+
+    
+  </div>
+  </div>
+  </div>
+
+</nav>

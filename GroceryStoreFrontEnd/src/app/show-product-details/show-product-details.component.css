@@ -1,0 +1,47 @@
+table{
+    width: 100%;
+}
+
+.mat-column-description
+{
+
+    width: 35% !important;
+}
+table td{
+padding: 10px;
+}
+
+
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    color:greenyellow;
+    min-width: 50px;
+    text-align: center;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border-color:greenyellow;
+    border-style:groove;
+
+    display: center;
+    
+}
+
+.input-field:focus{
+
+    outline: none !important;
+    border-color: #1dc633;
+    box-shadow: 0 0 5px #7fce71;
+}

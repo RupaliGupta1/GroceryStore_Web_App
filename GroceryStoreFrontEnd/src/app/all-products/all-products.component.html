@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="step mt-5">
+    <h1 class=" mb-3">Our<i> Products</i></h1>
+  </div>
+</div>
+
+<div class="container">
+
+
+  <div class="search_button  w-50 ">
+
+    <div class="input-icons">
+      <i class="bi bi-search icon"></i>
+      <input class="input-field" matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" ngModel
+        name="searchKey" id="searchKey" placeholder="Search any product">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let p of productDetails">
+      <div class="row p-2 mt-5 " (click)="showProductDetails(p.productId)">
+        <div class="image-container">
+          <img class=".home-page-product-image" height="180px" width="250px" [src]="p.productImages[0].url" alt="">
+        </div>
+
+        <div>
+          <p><b style="font-family: 'Times New Roman', Times, serif;">{{p.productName}}</b></p>
+        </div>
+        <div class="class-desp">
+          <p style="white-space: inherit; height:30px; width: 250px; overflow: hidden; text-overflow:  ellipsis;">
+            {{p.productDescription}} </p>
+        </div>
+
+        <div>
+          <b><i class="bi bi-currency-rupee"></i>{{p.productDiscountedPrice}} </b> &nbsp;&nbsp;<b
+            style="text-decoration:line-through">
+            {{p.productActualPrice}}</b>
+        </div>
+
+        <div class="mt-2">
+          <button type="button" mat-raised-button color="warn" style="font-size: 14px;"
+            (click)="showProductDetails(p.productId)">View
+            Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" mat-raised-button color="light" style="font-size: 14px;"
+            (click)="addToCart(p.productId)">Add To Cart</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
+  <button  type="button" mat-raised-button style="background-color: green; color: white;"
+    (click)="loadMoreProduct()">View more</button>
+</div>
+
+
+<div style="margin-top: 30px;">
+  <app-footer></app-footer>
+</div>
+
+ 
+

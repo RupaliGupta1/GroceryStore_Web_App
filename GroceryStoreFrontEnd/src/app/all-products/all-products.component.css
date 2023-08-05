@@ -1,0 +1,166 @@
+mat-grid-tile{
+    border:1px solid lightgray;
+    border-radius: 10px;
+    /* background-color: beige; */
+
+    background-color: rgb(245, 244, 241)
+
+}
+
+mat-grid-tile:hover{
+    transform: scale(1.03);   
+    cursor: pointer;
+}
+
+.home-page-product-image
+{
+    max-width: 90%;
+    max-height: 90%; 
+ position: absolute;
+ top: 0%;
+ bottom: 0%;
+ left: 0;
+ right: 0;
+ margin: auto;
+ padding: 5px;
+ 
+}
+.image-container{
+    position: relative;
+    height: 200px;  
+}
+
+
+
+
+
+.banner2{
+    background-image: url(../../assets/banner9.jpg);
+
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+margin-bottom: 10px;
+background-position: center top;
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+
+
+}
+.bannerContent h1{
+    color: green;
+   margin-top: auto;
+font-weight: bolder;
+
+
+ 
+}
+
+.bannerContent{
+    position:absolute;
+    top: 50%;
+    left:5%;
+   
+}
+
+.bannerContent button{
+    text-decoration: none;
+    background-color: greenyellow;
+    color: #00802b;
+    border-radius: 5px;
+}
+
+/* 
+.bgColor{
+    background-color: #ccffdd;
+} */
+
+.bannerContent b{
+    color: orange;
+}
+
+.stepBox{
+    border:1px solid lightgray;
+
+    padding :10px 10px;
+    border-radius: 5px;
+    background-color: rgb(245, 244, 241)
+}
+
+.stepBox h5{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.step i{
+    color: orange;
+}
+
+/* .bgColor{
+    background-color: lightgray;
+} */
+
+.stepBox:hover{
+transform: scale(1.03);   
+    cursor: pointer;
+}
+
+.bannerContent button:hover{
+   background-color:  orange;
+}
+
+
+
+
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    color:greenyellow;
+    min-width: 50px;
+    text-align: center;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+   
+    border-radius: 20px;
+    border-color:greenyellow;
+    border-style:groove;
+
+    display: center;
+    
+}
+
+.input-field:focus{
+
+    outline: none !important;
+    border-color: #1dc633;
+    box-shadow: 0 0 5px #7fce71;
+}
+
+.class-desp{
+    font-size: 10px;
+}
+
+.class-rupee{
+    color: green;
+}
+
+.ml-5{
+    margin-left: 10px;
+}
+
+
+.container .row .col-lg-3:hover{
+    cursor: pointer;
+    transform: scale(1.06);  
+    border-radius: 10px;
+    }

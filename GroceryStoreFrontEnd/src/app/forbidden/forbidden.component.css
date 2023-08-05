@@ -1,0 +1,18 @@
+
+h3{
+    color: red;
+}
+
+.card{
+    border: solid;
+    border-color: red;
+    max-width:  70%;
+    left: 15%;
+ 
+    margin-top: 10%;
+}
+
+.bi-x-circle-fill{
+    color: red;
+    font-size: 50px;
+}
